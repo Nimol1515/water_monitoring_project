@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Monetaring</title>
+    <link rel="stylesheet" href="style/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+</head>
+<body>
+    <header>
+		<a href="#" class="logo"xi class="fas-fa-untensils"></i><img style="height: 150px;
+            width: 150px;" src="img\npic-logo.png" alt="Npic Logo"></a>
+        <nav class="navbar">
+            <h1>វិទ្យាស្ថានជាតិពហុបច្ចេកទេសកម្ពុជា</h1>
+            <h1>NATIONAL POLYTECHNIC INSTITUDE OF CAMBODIA</h1>
+            <h1>មហាវិទ្យាល័យវិស្វកម្មអេឡិចត្រូនិច</h1>
+            <h1>FACULTY OF ELECTRONIC ENGINEERING</h1>
+		</nav>
+		<div class="icons">
+            <a href= "login.html" class="sign1" style="border:1px rgba(105, 230, 166, 1) solid;">Login</a>
+        </div>
+
+
+
+	</header>
+	<section class="team">
+
+		<div class="center" >
+			<h1 style="margin-top: 250px;">Node1</h1>
+		</div>
+		<div class="team-content">
+			<div class="box">
+				<div class="progress-circle p10">
+					<span>10%</span>
+					<div class="left-half-clipper">
+						<div class="first50-bar"></div>
+						<div class="value-bar"></div>
+					</div>
+					</div>
+					<div class="box">
+					<h5>Temperature</h5>
+				</div>
+			</div>
+			<div class="box">
+				<div class="progress-circle p33">
+					<span>33%</span>
+					<div class="left-half-clipper">
+						<div class="first50-bar"></div>
+						<div class="value-bar"></div>
+					</div>
+					</div>
+					<div class="box">
+					<h5>PH</h5>
+				</div>
+			</div>
+			<div class="box">
+				<div class="progress-circle over50 p66">
+					<span>66%</span>
+					<div class="left-half-clipper">
+						<div class="first50-bar"></div>
+						<div class="value-bar"></div>
+					</div>
+					</div>
+					<div class="box">
+					<h5>TDS</h5>
+				</div>
+			</div>
+			<div class="box">
+				<div class="progress-circle over50 p77">
+					<span>77%</span>
+					<div class="left-half-clipper">
+						<div class="first50-bar"></div>
+						<div class="value-bar"></div>
+					</div>
+					</div>
+					<div class="box">
+					<h5>Turbidity</h5>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="center">
+			<h1 style="margin-top: 60px;">Node2</h1>
+		</div>
+		<div class="team-content">
+			<div class="box">
+				<div class="progress-circle p10">
+					<span>15%</span>
+					<div class="left-half-clipper">
+					<div class="first50-bar"></div>
+					<div class="value-bar"></div>
+					</div>
+				</div>
+				<div class="box">
+					<h5>Temperature</h5>
+				</div>
+			</div>
+			<div class="box">
+				<div class="progress-circle p33">
+					<span>38%</span>
+					<div class="left-half-clipper">
+					<div class="first50-bar"></div>
+					<div class="value-bar"></div>
+					</div>
+				</div>
+				<div class="box">
+					<h5>PH</h5>
+				</div>
+			</div>
+			<div class="box">
+				<div class="progress-circle over50 p66">
+					<span>60%</span>
+					<div class="left-half-clipper">
+					<div class="first50-bar"></div>
+					<div class="value-bar"></div>
+					</div>
+				</div>
+				<div class="box">
+					<h5>TDS</h5>
+				</div>
+			</div>
+			<div class="box">
+				<div class="progress-circle over50 p77">
+					<span>47%</span>
+					<div class="left-half-clipper">
+					<div class="first50-bar"></div>
+					<div class="value-bar"></div>
+					</div>
+				</div>
+				<div class="box">
+					<h5>Turbidity</h5>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+	<section class="discription">
+		<div class="center">
+			<h1 style="margin-top: 10px;padding-right:10px;">ក្រាបទិន្នន័យប្រចាំសប្តាហ៍</h1>
+		</div>
+		<canvas id="myChart" style="margin-top:60px;margin-bottom:60px;width:100%;max-width:600px"></canvas>
+		<script>
+			const xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+			const yValues = [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100];
+			
+			new Chart("myChart", {
+			  type: "line",
+			  data: {
+				labels: xValues,
+				datasets: [{
+				  fill: false,
+				  lineTension: 0,
+				  backgroundColor: "rgba(0,0,255,1.0)",
+				  borderColor: "rgba(0,0,255,0.1)",
+				  data: yValues
+				}]
+			  },
+			  options: {
+				legend: {display: false},
+				scales: {
+				  yAxes: [{ticks: {min: 0, max:100}}],
+				}
+			  }
+			});
+			</script>
+
+		
+	</section>
+
+	<section class="team">
+		
+		<div class="center">
+			<h1>Condition</h1>
+		</div>
+		<div class="team-content">
+			<div class="box">
+				<div class="progress-circle p10">
+					<span>Bad</span>
+					<div class="left-half-clipper">
+					<div class="first50-bar"></div>
+					<div class="value-bar"></div>
+					</div>
+				</div>
+				<div class="box">
+					<h5>Node1</h5>
+				</div>
+			</div>
+			<div class="box">
+				<div class="progress-circle over50 p66">
+					<span>Normal</span>
+					<div class="left-half-clipper">
+					<div class="first50-bar"></div>
+					<div class="value-bar"></div>
+					</div>
+				</div>
+				<div class="box">
+					<h5>Node2</h5>
+				</div>
+			</div>
+			<div class="box">
+				<div class="progress-circle p33">
+					<span>Bad</span>
+					<div class="left-half-clipper">
+					<div class="first50-bar"></div>
+					<div class="value-bar"></div>
+					</div>
+				</div>
+				<div class="box">
+					<h5>Node3</h5>
+				</div>
+			</div>
+			<div class="box">
+				<div class="progress-circle over50 p77">
+					<span>Good</span>
+					<div class="left-half-clipper">
+					<div class="first50-bar"></div>
+					<div class="value-bar"></div>
+					</div>
+				</div>
+				<div class="box">
+					<h5>Node4</h5>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+	
+
+	<section class="team">
+		<div class="center">
+			<h1>Our Advisors</h1>
+		</div>
+
+		<div class="team-content">
+			<div class="box">
+				<!-- change to ur actual pic here -->
+				<img src="img/02.png">
+				<h3>នី វីរបុរា</h3>
+				<h5>គ្រូដឹកនាំ</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-facebook-box-fill"></i></a>
+					<a href="#"><i class="ri-instagram-fill"></i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="img/02.png">
+				<h3> ចាន់ សុភាព</h3>
+				<h5>គ្រូពិគ្រោះ</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-facebook-box-fill"></i></a>
+					<a href="#"><i class="ri-instagram-fill"></i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="img/02.png">
+				<h3>សាែរ៉ន សេវេន</h3>
+				<h5>គ្រូពិគ្រោះ</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-facebook-box-fill"></i></a>
+					<a href="#"><i class="ri-instagram-fill"></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="team">
+		<div class="center">
+			<h1>Our team</h1>
+		</div>
+
+		<div class="team-content">
+			<div class="box">
+				<!-- change to ur actual pic here -->
+				<img src="img/01.png">
+				<h3>សារិ ពុទ្ធិពណ្ណរាយ</h3>
+				<h5>ប្រធានក្រុម</h5>
+				<!-- input ur actual email and tel below -->
+				<h5>Email:</h5>
+				<h5>Tel:</h5>
+			</div>
+
+			<div class="box">
+				<img src="img/01.png">
+				<h3>ឈឿន រីណា</h3>
+				<h5>សមាជិកក្រុម</h5>
+				<h5>Email:</h5>
+				<h5>Tel:</h5>
+			</div>
+
+			<div class="box">
+				<img src="img/01.png">
+				<h3>ញ៉ៅ ត្រេនឆៃលីន</h3>
+				<h5>សមាជិកក្រុម</h5>
+				<h5>Email:</h5>
+				<h5>Tel:</h5>
+			</div>
+		</div>
+	</section>
+	<script src="home page/script.js"></script>
+</body>
+</html>
